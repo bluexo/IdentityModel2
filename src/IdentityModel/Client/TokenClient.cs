@@ -44,7 +44,7 @@ namespace IdentityModel.Client
         public TokenClient(string address, string clientId, string clientSecret, AuthenticationStyle style = AuthenticationStyle.BasicAuthentication)
             : this(address, clientId, clientSecret, new HttpClientHandler(), style)
         { }
-        
+
         public TokenClient(string address, string clientId, HttpMessageHandler innerHttpMessageHandler)
             : this(address, clientId, string.Empty, innerHttpMessageHandler, AuthenticationStyle.PostValues)
         { }

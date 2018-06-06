@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>2.0.0</VersionPrefix>
+    <Authors>Dominick Baier;Brock Allen</Authors>
+    <TargetFrameworks>net45</TargetFrameworks>
+    <AssemblyName>IdentityModel</AssemblyName>
+    <PackageId>IdentityModel</PackageId>
+    <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer</PackageTags>
+    <PackageIconUrl>https://identityserver.github.io/Documentation/assets/images/icons/IDmodel_icon128.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/IdentityModel/IdentityModel2</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/IdentityModel/IdentityModel2/blob/release/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/identitymodel/identitymodel2</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <PackageReference Include="System.Net.Http" Version="4.1.1" />
+    <PackageReference Include="System.Security.Claims" Version="4.0.1" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.2.0" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Json.NET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>
